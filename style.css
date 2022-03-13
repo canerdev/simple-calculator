@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* results */
+.results {
+    max-width: 272.2px;
+    padding: 1em .7em;
+    background: linear-gradient(to right, #1c1c23, #020204);
+    text-align: right;
+    color: #00ff41;  
+}
+
+.results p {
+    word-wrap: break-word;
+}
+.results :first-child {
+    color: #c8d0ca;
+}
+
+.results :last-child{
+    font-size: 2.5em;
+}
+
+/* grid */
+#plus {grid-area: plus;}
+#minus {grid-area: minus;}
+#minus {grid-area: minus;}
+#times {grid-area: times;}
+#divide {grid-area: divide;}
+#seven {grid-area: seven;}
+#eight {grid-area: eight;}
+#nine {grid-area: nine;}
+#four {grid-area: four;}
+#five {grid-area: five;}
+#six {grid-area: six;}
+#one {grid-area: one;}
+#two {grid-area: two;}
+#three {grid-area: three;}
+#zero {grid-area: zero;}
+#dot {grid-area: dot;}
+#clear {grid-area: clear;}
+#delete {grid-area: delete;}
+#equal {grid-area: equal;}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'plus minus times divide'
+    'seven eight nine delete'
+    'four five six equal'
+    'one two three equal'
+    'zero dot clear equal'
+    ;
+}
+
+/* keys */
+.keys{
+    width: inherit;
+    height: fit-content;
+    background: linear-gradient(to right top, #1c1c23, #020204);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.15em;
+}
+.keys div{
+    max-width: 60px;
+    max-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .15em;
+    padding: 1.7em;
+    background-color: #1c1c23;
+    color: #00ff41;
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
+
+.keys div:last-child{
+    background-color: #ff0000;
+    color: white;
+}
+
+.keys div:hover:not(:last-child) {
+    box-shadow: 0 0 5px 1px #191919;
+    background-color: #191919;
+}
+
+.keys div:last-child:hover {
+    box-shadow: 0 0 5px 1px #ff0000;
+}
